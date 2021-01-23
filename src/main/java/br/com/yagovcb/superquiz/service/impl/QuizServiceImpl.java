@@ -34,11 +34,11 @@ public class QuizServiceImpl implements QuizService {
     public void validaQuiz(Quiz q, Respostas r) throws Exception {
 
         for (Respostas resposta: q.getRespostas()) {
-            if (!resposta.getIsCerta().equals(r.getIsCerta())){
-                throw new Exception("Infelizmente você não acertou a resposta correta!" + q);
-            } else {
-                throw new Exception("Parabéns, resposta correta!");
-            }
+//            if (!resposta.getIsCerta().equals(r.getIsCerta())){
+//                throw new Exception("Infelizmente você não acertou a resposta correta!" + q);
+//            } else {
+//                throw new Exception("Parabéns, resposta correta!");
+//            }
         }
     }
 }

@@ -23,5 +23,5 @@ public class Respostas {
 
     @NonNull
     @Column(name = "is_certa")
-    private Boolean isCerta;
+    private Boolean certa;
 }

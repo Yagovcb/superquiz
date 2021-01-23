@@ -2,7 +2,6 @@ package br.com.yagovcb.superquiz.controller;
 
 import br.com.yagovcb.superquiz.model.Quiz;
 import br.com.yagovcb.superquiz.model.Respostas;
-import br.com.yagovcb.superquiz.model.dto.QuizDTO;
 import br.com.yagovcb.superquiz.service.QuizService;
 import br.com.yagovcb.superquiz.service.RespostaService;
 import lombok.RequiredArgsConstructor;

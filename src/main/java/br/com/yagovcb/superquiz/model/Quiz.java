@@ -32,5 +32,5 @@ public class Quiz {
     private String autor;
 
     @Column(name = "is_concluido")
-    private Boolean isConcluido;
+    private Boolean concluido;
 }
