@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Super Quiz CB</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-light bg-light" style="color: burlywood">
+                <span class="navbar-brand mb-0 h1" style="font-weight: bold; color: darkgoldenrod">Super Quiz CB</span>
+                <a href="/quiz/novoQuiz" class="btn btn-primary" role="button">Novo Quiz</a>
+            </nav>
+        </header>
+        <section>
+            <div class="container"  style="width: 60%; padding-bottom: 30px;">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb" style="background-color: white; padding-left: 0px;">
+                        <li class="breadcrumb-item active" aria-current="page">Quizzes Disponiveis</li>
+                    </ol>
+                </nav>
+                <div class="card shadow-sm bg-white rounded" style="margin-top: 20px;" th:each="quiz : ${quiz}">
+                    <div class="card-body">
+                        <p class="card-subtitle mb-2 text-muted" style="font-size: 0.8rem;">
+                            <span th:text="${quiz.autor}"/>
+                        </p>
+                        <a th:href="${(#mvc.url('QC#getDetalhamentoQuiz').arg(0, quiz.id)).build()}">
+                            <h4 class="card-title" style="font-weight: bold; color: black; padding-top: 5px;">
+                                <span th:text="${quiz.enunciado}"/>
+                            </h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
